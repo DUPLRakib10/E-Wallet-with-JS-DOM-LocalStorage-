@@ -1,2 +1,2 @@
-# E-Wallet-with-JS-DOM-LocalStorage-
+# E-Wallet-with-JS-DOM-LocalStorage
 This is a practice project.
