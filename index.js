@@ -52,7 +52,7 @@ function showItems(){
       </div>
     </div>
     <div class="item-amount ${item.type === '+' ? 'income-amount' : 'expense-amount'}">
-      <p>${item.type}${item.value}</p>
+      <p>${item.type}${sep(item.value)}</p>
     </div>
   </div>
     
@@ -75,7 +75,7 @@ function addItems(type,desc,value){
       </div>
     </div>
     <div class="item-amount ${type === '+' ? 'income-amount' : 'expense-amount'}">
-      <p>${type}${value}</p>
+      <p>${type}${sep(value)}</p>
     </div>
   </div>
     
@@ -87,6 +87,7 @@ function addItems(type,desc,value){
     addTimestoLS(desc,time,type,value);
     showTotalExpense();
     showTotalIncome();
+    showTotalBalance();
 
 }
 function resetForm(){
@@ -131,7 +132,7 @@ function showTotalIncome(){
       totalIncome += parseInt(item.value);
     }
   }
-document.querySelector('.income__amount p').innerText = `$${totalIncome}`;
+document.querySelector('.income__amount p').innerText = `$${sep(totalIncome)}`;
   
 }
 
@@ -148,6 +149,44 @@ function showTotalExpense(){
       totalExpense += parseInt(item.value);
     }
   }
-  document.querySelector('.expense__amount p').innerText = `$${totalExpense}`;
+  document.querySelector('.expense__amount p').innerText = `$${sep(totalExpense)}`;
   
+}
+
+
+
+showTotalBalance();
+
+function showTotalBalance() {
+  let items = getitemsfromLS();
+  let balance = 0;
+
+  for(let item of items){
+    if(item.type === '+'){
+      balance += parseInt(item.value);
+    }
+
+    else{
+      balance -= parseInt(item.value);
+    }
+  }
+
+  document.querySelector(`.balance__amount p`).innerText = sep(balance);
+  
+
+  if(balance >= 0){
+    document.querySelector('header').className = 'green';
+  }
+
+  else{
+    document.querySelector('header').className = 'red';
+  }
+}
+
+
+function sep(amount){
+  amount = parseInt(amount);
+
+
+  return amount.toLocaleString();
 }
