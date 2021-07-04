@@ -8,89 +8,34 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
-html {
-  font-size: 62.5%;
-}
-
+html {font-size: 62.5%;}
 @media only screen and (max-width: 68.75em) {
   html {
-    font-size: 50%;
-  }
-}
-
+    font-size: 50%;}}
 body {
-  font-family: 'Noto Serif', serif;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
+  font-family: 'Noto Serif', serif;font-weight: 400;line-height: 1.6;}
 header {
-  color: white;
-  padding: 1rem 2rem;
-  min-height: 30vh;
-}
-
+  color: white;padding: 1rem 2rem;min-height: 30vh;}
 header.green {
   background: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
   background: -webkit-linear-gradient(left top, #7ed56f, #28b485);
   background: -o-linear-gradient(left top, #7ed56f, #28b485);
-  background: linear-gradient(to right bottom, #7ed56f, #28b485);
-}
-
+  background: linear-gradient(to right bottom, #7ed56f, #28b485);}
 header.red {
   background: -webkit-gradient(linear, left top, right bottom, from(#d56f6f), to(#b42828f5));
   background: -webkit-linear-gradient(left top, #d56f6f, #b42828f5);
   background: -o-linear-gradient(left top, #d56f6f, #b42828f5);
-  background: linear-gradient(to right bottom, #d56f6f, #b42828f5);
-}
-
+  background: linear-gradient(to right bottom, #d56f6f, #b42828f5);}
 header .ewalletLogo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+  display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
 @media (max-width: 500px) {
-  header .ewalletLogo {
-    margin-bottom: 1rem;
-  }
-}
-
+  header .ewalletLogo {margin-bottom: 1rem;}}
 header .ewalletLogo img {
-  height: 50px;
-  width: 50px;
-  margin: 10px;
-  margin-right: 13px;
-  opacity: 0.95;
-}
-
-header .ewalletLogo h1 {
-  display: inline;
-  color: white;
-  font-size: 3.2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: 2px;
-  font-family: 'Dancing Script', cursive;
-}
-
+  height: 50px;width: 50px;margin: 10px;margin-right: 13px;opacity: 0.95;}
+header .ewalletLogo h1 {display: inline;color: white;font-size: 3.2rem;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;
+      -ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;letter-spacing: 2px;font-family: 'Dancing Script', cursive;}
 .balance {
-  text-align: center;
-}
-
+  text-align: center;}
 @media (max-width: 500px) {
   .balance {
     margin-bottom: 1.3rem;
